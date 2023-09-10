@@ -1,6 +1,10 @@
 .angular
 appsettings.json
 
+.vscode
+/bin/
+obj
+
 # Logs
 logs
 *.log
