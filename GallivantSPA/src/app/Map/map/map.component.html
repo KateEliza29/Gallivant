@@ -1,0 +1,17 @@
+<div class="row">
+    <label class="col col-form-label">{{markers?.length}} Markers</label>
+</div>
+            
+            <!-- Map -->
+			<div class="col-sm-12 col-md-6 col-lg-8">
+
+				<div class="map-inner" leaflet
+                    (leafletClick)="mapClick($event)"
+					 [leafletOptions]="options"
+					 [leafletZoom]="zoom"
+                     [leafletLayers]="markers">
+				</div>
+
+			</div>
+
+            
