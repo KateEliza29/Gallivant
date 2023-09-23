@@ -1,0 +1,22 @@
+<div class="search-bar">
+    <div class="search-container">
+        <!-- <input [(ngModel)]="searchTerm" class="search-box" type="text" (keyup)="searchBoxKeyUp($event)"/>
+        <fa-icon class="input-icon" [icon]="faSearch"></fa-icon> -->
+
+        <!-- <input [(ngModel)]="searchTerm" list="browsers" name="myBrowser" (change)="searchBoxKeyUp($event)" />
+        <datalist id="browsers" >
+            <option *ngFor="let result of results">{{result.name}}<option>
+        </datalist>     -->
+        <input type="text"
+        (change)="searchBoxKeyUp($event)"
+        placeholder="Typey Type"
+        matInput
+        [(ngModel)]="searchTerm"
+        [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let result of results" [value]="result.mapbox_id">
+              {{result.name}}
+            </mat-option>
+          </mat-autocomplete>
+    </div>
+</div>
